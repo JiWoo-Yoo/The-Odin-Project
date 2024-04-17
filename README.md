@@ -6,7 +6,7 @@
 ## 페이지 1. 내기 점수 입력 페이지
 
 ![odin-rsp-1](https://github.com/JiWoo-Yoo/odin-rsp/assets/145994347/f0a9599f-bede-4105-8cb2-30b7d7775557)
-<img src="https://github.com/JiWoo-Yoo/odin-rsp/assets/145994347/f0a9599f-bede-4105-8cb2-30b7d7775557" width="400" height="200">
+<img src="https://github.com/JiWoo-Yoo/odin-rsp/assets/145994347/f0a9599f-bede-4105-8cb2-30b7d7775557" width="640" height="360">
 
 - 해당 점수를 획득 하는 쪽이 승리
 - 둘 중 하나라도 해당 점수 획득 시 게임 오버
