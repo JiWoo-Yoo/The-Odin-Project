@@ -1,0 +1,199 @@
+* {
+  background-color: tomato;
+  overflow: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.start-label {
+  text-align: center;
+  color: white;
+  font-size: 1000%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+.input-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  height: 20%;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  gap: 1em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.input-form label {
+  font-size: 300%;
+  background-color: white;
+  color: tomato;
+  /* max-width: 50%; */
+}
+.input-form input {
+  font-size: 500%;
+  width: 70%;
+  color: tomato;
+  background-color: white;
+  border: 1px solid salmon;
+  border-radius: 5px;
+  text-align: center;
+}
+
+input:focus {
+  outline: 2px solid tomato;
+}
+
+.start-label:hover {
+  color: green;
+  transition-duration: 0.6s;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 400%;
+  margin-top: 5%;
+}
+
+.container {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  margin: 6% 10%;
+  padding: 5%;
+}
+
+.play-result {
+  color: tomato;
+  text-align: center;
+  background-color: white;
+  font-size: 500%;
+  font-weight: bold;
+}
+
+.score-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.user-score,
+.com-score {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.user-score div,
+.com-score div {
+  font-weight: bold;
+  color: tomato;
+  background-color: white;
+}
+
+.name {
+  font-size: 300%;
+}
+
+.score {
+  font-size: 250%;
+}
+
+.main-board {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.user-hand,
+.pc-hand {
+  font-size: 1000%;
+  width: 30%;
+  height: 250px;
+  background-color: salmon;
+  color: tomato;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button {
+  color: white;
+  background-color: tomato;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 30px;
+  border-style: none;
+  margin: 1px 5px;
+}
+
+button:hover {
+  background-color: salmon;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.result-text,
+.result-score {
+  color: tomato;
+  background-color: white;
+  margin: 0px;
+}
+
+.result-score {
+  font-size: 600%;
+  margin-bottom: 5%;
+}
+
+.result-btn-div {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+}
+
+.result-btn-div button {
+  width: 200px;
+  height: 100px;
+  border-radius: 15px;
+  margin: 5px;
+}
