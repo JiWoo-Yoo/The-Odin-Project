@@ -151,7 +151,6 @@ function startGame(inputScore) {
   const playerHandDiv = document.createElement("div");
   const btnDiv = document.createElement("div");
   const pcHandDiv = document.createElement("div");
-  const resultDiv = document.createElement("div");
 
   // divs inside of scoreDiv
   scoreDiv.classList.add("score-container");
@@ -217,14 +216,11 @@ function startGame(inputScore) {
   mainBoardDiv.appendChild(btnDiv);
   mainBoardDiv.appendChild(pcHandDiv);
 
-  // divs inside of resultDiv
-
   h1.textContent = "Rock, Scissors, Paper!";
   document.body.appendChild(h1);
 
   container.appendChild(scoreDiv);
   container.appendChild(mainBoardDiv);
-  container.appendChild(resultDiv);
 
   document.body.appendChild(container);
 }
