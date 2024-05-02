@@ -1,0 +1,49 @@
+* {
+    font-weight: 300;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+h2 {
+    font-weight: 400;
+}
+.author {
+    text-align: right;
+    font-size: 20px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+.description {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.description > p {
+    font-size: 20px;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.link-container > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
