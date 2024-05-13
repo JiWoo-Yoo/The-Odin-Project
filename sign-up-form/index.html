@@ -16,34 +16,35 @@
             <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
             <p>You <em>know</em> you want to.</p>
         </div>
-        <div class="form-div">
+        <div class="form-div" action="./loggedinpage.html">
             <div class="form-title">Let's do this!</div>
-            <div class="inputs">
+            <form class="inputs">
                 <div class="input-label"><label for="first-name">FIRST NAME</label>
-                    <input id="first-name"/></div>
+                    <input id="first-name" name="first-name"/></div>
                 <div class="input-label">
                     <label for="last-name">LAST NAME</label>
-                    <input id="last-name"/>
+                    <input id="last-name" name="last-name"/>
                     </div>
                 <div class="input-label">
                     <label for="e-mail">EMAIL</label>
-                    <input id="e-mail"/>
+                    <input type="email" id="e-mail" name="e-mail"/>
                     </div>
                 <div class="input-label">
                     <label for="phone-num">PHONE NUMBER</label>
-                    <input id="phone-num"/>
+                    <input id="phone-num" maxlength="11"/>
                 </div>
-                <div class="input-label"><label for="password">PASSWORD</label>
-                    <input id="password"/></div>
+                <div class="input-label">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password"/></div>
                 <div class="input-label">
                     <label for="confirm-password">CONFIRM PASSWORD</label>
                     <input id="confirm-password"/>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="btn-div">
-            <button class="btn">Create Account</button>
-            <div class="login-ask">Already have an account? <a href="#">Log in</a></div>
+            <button type="submit" class="btn">Create Account</button>
+            <div class="login-ask">Already have an account? <a href="./loginpage.html">Log in</a></div>
     <script src="./script.js"></script>
 </body>
 </html>

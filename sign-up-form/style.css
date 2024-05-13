@@ -94,9 +94,19 @@ body {
 .input-label input {
     font-size: 20px;
     border-radius: 5px;
-    border: 1px solid #E5E7EB;
+    border: 1.5px solid #E5E7EB;
     padding: 5px;
     margin: 5px 5px 5px 0px;
+}
+
+.input-label input:focus {
+    border-color: blue;
+    outline: none;
+    box-shadow: 5px 5px 5px rgba(200, 200, 200, 0.7);
+}
+
+.input-label input:invalid {
+    border-color: red;
 }
 
 .btn-div {
