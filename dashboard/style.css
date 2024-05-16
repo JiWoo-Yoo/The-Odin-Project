@@ -1,0 +1,259 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.5);
+}
+
+.container {
+    width: 100vw;   
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+    background-color: #38bdf8;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    z-index: 2;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    text-align: center;
+    margin: auto;
+    margin-left: 10%;
+    gap: 20px;
+}
+
+.logo-img {
+    font-size: 30px;
+    text-align: center;
+}
+
+.logo-text {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+}
+
+.menu {
+    display: grid;
+    text-align: left;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 10%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(6, 1fr) 1fr repeat(3, 1fr);
+    gap: 20px;
+}
+
+.menu-icons {
+    font-size: 20px;
+    text-align: left;   
+}
+
+.menu-items {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+
+.up-bar {
+    display: grid;
+    background-color: white;
+    grid-template-rows: 1fr 1fr;
+    z-index: 1;
+}
+
+.search-part {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr 1fr 3fr;
+    gap: 20px;
+}
+
+.search-part * {
+    margin: auto;
+}
+
+.search-icon {
+    font-size: 30px;
+    text-align: center;
+}
+
+.search-bar {
+    background-color: gray;
+    border-radius: 10px;
+    height: 30px;
+    width: 100%;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.search-bar:hover {
+    background-color: rgb(80, 80, 80);
+    transition-duration: 0.5s;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    background-color: #38bdf8;
+    border-radius: 50%;
+}
+
+.nickname {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: black;
+}
+
+.profile-part {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 20px;
+    margin: auto;
+    margin-left: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    margin-right: 20px;
+    gap:  30px;
+}
+
+button {
+    background-color: #38bdf8;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
+.main-board {
+    padding: 30px;
+    background-color: aliceblue ;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+}
+
+.main-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.sub-items {
+    display: grid;
+    grid-template-rows: 30px 1fr 30px 1fr;
+    gap: 20px;
+}
+
+.title {
+    color: black;
+    font-size: 23px;
+    font-weight: bold;
+    grid-column: 1 / 3;
+}
+
+.h2 {
+    font-size: 20px;
+}
+
+.paragraph {
+    font-size: 15px;
+    color: gray;
+    padding-top: 5px;
+    grid-column: 1 / 3;
+}
+
+.main-item {
+    border-radius: 5px;
+    background-color: white;
+    border-left: 10px solid orange;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    margin: 3px;
+    padding: 20px;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    grid-column: 2 / 3;
+}
+
+.sub-item {
+    border-radius: 5px;
+    background-color: white;
+    grid-column: 1 / 3;
+    margin: 5px;
+}
+
+.a {
+    padding: 5%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.a-block {
+    border-top: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.t {
+    display: grid;
+    padding: 20px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.t-block {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+}
+
+.t-block .nickname{
+    font-size: 15px;
+}
+
+.h3 {
+    font-size: 15px;
+}
+
+.small {
+    font-size: 13px;
+}
