@@ -1,10 +1,15 @@
 // console 화면 출력을 위한 작업
-const readline = require('readline');
+// const readline = require('readline');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
+
+// DOM 조작을 위한 작업
+const webBoard = document.querySelector('#board');
+const restartBtn = document.querySelector('#restartBtn');
+const gameStatus = document.querySelector('#gameStatus');
 
 // Gameboard 객체 - 게임 보드 관리, 보드 상태 저장 및 업데이트
 // IIFE로 생성 - 외부에서 메서드를 통해서만 접근 가능 / 모듈패턴 / 단일인스턴스생성
@@ -22,7 +27,7 @@ const Gameboard = (() => {
     };
 
     const resetBoard = () => {
-        let gameboard = ["", "", "", "", "", "", "", "", ""];
+        gameboard = ["", "", "", "", "", "", "", "", ""];
     };
 
     return { getBoard, setCell, resetBoard };
@@ -76,10 +81,12 @@ const GameController = (() => {
         if (gameOver) return;
         if (Gameboard.setCell(index, currentPlayer.mark)) {
             if(checkWin()) {
-                console.log(`${currentPlayer.name} Wins!`);
+                //console.log(`${currentPlayer.name} Wins!`);
+                gameStatus.textContent = `${currentPlayer.name} Wins!`;
                 gameOver = true;
             } else if(checkDraw()) {
-                console.log("Draw!");
+                //console.log("Draw!");
+                gameStatus.textContent = "Draw!";
                 gameOver = true;
             } else {
                 switchPlayer();
@@ -92,6 +99,7 @@ const GameController = (() => {
         Gameboard.resetBoard();
         currentPlayer = player1;
         gameOver = false;
+        gameStatus.textContent = "";
         console.log("Game reset.");
         DisplayController.render();
     };
@@ -107,34 +115,48 @@ const GameController = (() => {
 
 const DisplayController = (function() {
     const render = () => {
+      webBoard.innerHTML = "";
       const board = Gameboard.getBoard();
-      console.log(`
-        ${board[0] || " "} | ${board[1] || " "} | ${board[2] || " "}
-        -----------
-        ${board[3] || " "} | ${board[4] || " "} | ${board[5] || " "}
-        -----------
-        ${board[6] || " "} | ${board[7] || " "} | ${board[8] || " "}
-      `);
+      board.forEach((cell, index) => {
+        const cellElement = document.createElement("div");
+        cellElement.classList.add("cell");
+        cellElement.textContent = cell;
+        cellElement.addEventListener("click", () => {GameController.playRound(index)});
+        webBoard.appendChild(cellElement);
+      })
+    //   console.log(`
+    //     ${board[0] || " "} | ${board[1] || " "} | ${board[2] || " "}
+    //     -----------
+    //     ${board[3] || " "} | ${board[4] || " "} | ${board[5] || " "}
+    //     -----------
+    //     ${board[6] || " "} | ${board[7] || " "} | ${board[8] || " "}
+    //   `);
     };
     return { render };
   })();
 
-const askForMove = () => {
-    rl.question(`Enter your move (1-9), ${GameController.getCurrentPlayer().name}: `, (answer) => {
-      const index = parseInt(answer) - 1;
-      if (!isNaN(index) && index >= 0 && index <= 8) {
-        GameController.playRound(index);
-        if (!GameController.isGameOver()) {
-          askForMove();
-        } else {
-          rl.close();
-        }
-      } else {
-        console.log("Invalid input! Please enter a number between 1 and 9.");
-        askForMove();
-      }
-    });
-  };
+// const askForMove = () => {
+//     rl.question(`Enter your move (1-9), ${GameController.getCurrentPlayer().name}: `, (answer) => {
+//       const index = parseInt(answer) - 1;
+//       if (!isNaN(index) && index >= 0 && index <= 8) {
+//         GameController.playRound(index);
+//         if (!GameController.isGameOver()) {
+//           askForMove();
+//         } else {
+//           rl.close();
+//         }
+//       } else {
+//         console.log("Invalid input! Please enter a number between 1 and 9.");
+//         askForMove();
+//       }
+//     });
+//   };
 
-GameController.resetGame();
-askForMove();
+restartBtn.addEventListener("click", () => {
+    GameController.resetGame();
+});
+
+DisplayController.render();
+
+//GameController.resetGame();
+//askForMove();
