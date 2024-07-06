@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: darkolivegreen;
+    background-image: url('../img/healthy-7213383_1280.jpg');
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#img-info {
+    position: fixed;
+    bottom: 60px;
+    width: 100%;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: darkolivegreen;
+}
+
+footer {
+    margin: 0;
+    bottom: 0px;
+    padding: 20px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: darkolivegreen;
+    color: white;
+    width: 100vw;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    align-items: center;
+}
+
+.btn {
+    background-color: darkolivegreen;
+    font-size: 30px;
+    border: none;
+    color: white;
+}
+
+.btn:hover {
+    color: gray;;
+    transition-duration: .5s;
+    cursor: pointer;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+}
+
+p {
+    background-color: white;
+    border: 10px solid darkolivegreen;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 40px;
+    font-size: 30px;
+    margin-bottom: 60px;
+}
