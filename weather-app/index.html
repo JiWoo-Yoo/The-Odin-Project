@@ -8,12 +8,13 @@
 </head>
 <body>
     <h1>Weather App!</h1>
-    <h2>어느 위치의 날씨를 보고 싶으신가요? (위도, 경도 입력)</h2>
-    <input id="latitude" type="number" name="latitude" placeholder="위도"/>
-    <input id="longitude" type="number" name="longitude" placeholder="경도" />
+    <h2>어느 위치의 날씨를 보고 싶으신가요? (도시 이름 입력)</h2>
+    <input id="city" type="text" name="city" placeholder="도시 이름 입력" autofocus required/>
     <script src="./script.js" type="module"></script>
     <div>
         <button id="see-weather">날씨 보기</button>
+    </div>
+    <div id="weather">
     </div>
 </body>
 </html>
