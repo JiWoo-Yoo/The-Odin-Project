@@ -32,6 +32,6 @@ loopBtn.addEventListener('click', () => {
 
 recursBtn.addEventListener('click', () => {
     const number = parseInt(recursion.value);
-    const fibRecArr = fibsRec(number);
+    const fibRecArr = fibsRec(number-1);
     recursRes.textContent = fibRecArr.toString();
 });
